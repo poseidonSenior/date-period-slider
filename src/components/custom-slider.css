@@ -1,0 +1,85 @@
+.custom-slider-container {
+    margin: 100px;
+    height: 100px;
+}
+
+.slider-body {
+    background: #E8E8E8;
+    max-width: 1000px;
+    padding: 60px;
+}
+
+.months-or-years {
+    width: 75px;
+}
+
+.years,
+.months {
+    font-size: 15px;
+    color: #6390C3;
+    margin: 0;
+    border-bottom: 1px solid #91C6DA;
+}
+
+.years {
+    margin-bottom: 10px;
+}
+
+.active-p {
+    font-weight: 700;
+    color: rgb(101, 125, 199);
+}
+
+.slider {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.slider-body .css-14pt78w-MuiSlider-rail {
+    height: 7px;
+    opacity: 1;
+    color: #EDF1F8;
+}
+
+.slider-body .css-1gv0vcd-MuiSlider-track {
+    height: 3px;
+    color: #5CADEA;
+}
+
+.slider-body .css-eg0mwd-MuiSlider-thumb {
+    border: 5px solid;
+    border-color: #62B0E9;
+    color: white;
+}
+
+.slider-body .css-nnid7-MuiSlider-valueLabel {
+    white-space: none;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 20px 3px #AFD6DD;
+    background-color: white;
+    color: #4b7fbb;
+    font-weight: 600;
+}
+
+.MuiSlider-thumb[data-index="1"] .css-nnid7-MuiSlider-valueLabel {
+    top: 75px
+}
+
+.MuiSlider-thumb[data-index="0"] .css-nnid7-MuiSlider-valueLabel {
+    top: -17px
+}
+
+.MuiSlider-thumb[data-index="1"] .css-nnid7-MuiSlider-valueLabel:before {
+    bottom: 48px;
+}
+
+.slider-body,
+.slider-body .MuiSlider-markLabel,
+.MuiSlider-markLabel div {
+    color: #9E9E9E;
+}
+
+.slider-body .MuiSlider-mark {
+    display: none;
+}
