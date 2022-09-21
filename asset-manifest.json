@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/date-period-slider/static/css/main.2f519662.css",
+    "main.js": "/date-period-slider/static/js/main.6a3dc75e.js",
+    "index.html": "/date-period-slider/index.html",
+    "main.2f519662.css.map": "/date-period-slider/static/css/main.2f519662.css.map",
+    "main.6a3dc75e.js.map": "/date-period-slider/static/js/main.6a3dc75e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f519662.css",
+    "static/js/main.6a3dc75e.js"
+  ]
+}
