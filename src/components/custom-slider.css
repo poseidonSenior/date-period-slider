@@ -1,28 +1,28 @@
 .custom-slider-container {
-    margin: 100px;
-    height: 100px;
+    margin: 6.25em;
 }
 
 .slider-body {
     background: #E8E8E8;
-    max-width: 1000px;
-    padding: 60px;
+    max-width: 62.5em;
+    min-width: 18.75em;
+    padding: 3.75em;
 }
 
 .months-or-years {
-    width: 75px;
+    width: 4.688em
 }
 
 .years,
 .months {
-    font-size: 15px;
+    font-size: 0.938em;
     color: #6390C3;
     margin: 0;
     border-bottom: 1px solid #91C6DA;
 }
 
 .years {
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
 }
 
 .active-p {
@@ -31,23 +31,42 @@
 }
 
 .slider {
-    margin-top: 10px;
-    margin-left: 100px;
+    margin-top: 0.625em;
+    margin-left: 6.25em;
+}
+
+.MuiSlider-markLabel .highlight-text-year {
+    font-weight: 700;
+    color: black;
+}
+
+.MuiSlider-markLabel .marks-months-between-years {
+    font-size: 0.9em;
+    margin-top: 0.05em;
+}
+
+.MuiSlider-markLabel .first-size {
+    font-size: 0.625em;
+    margin-top: 0.5em;
+}
+
+.MuiSlider-markLabel .second-size {
+    display: none;
 }
 
 .slider-body .css-14pt78w-MuiSlider-rail {
-    height: 7px;
+    height: 0.438em;
     opacity: 1;
     color: #EDF1F8;
 }
 
 .slider-body .css-1gv0vcd-MuiSlider-track {
-    height: 3px;
+    height: 0.188em;
     color: #5CADEA;
 }
 
 .slider-body .css-eg0mwd-MuiSlider-thumb {
-    border: 5px solid;
+    border: 0.313em solid;
     border-color: #62B0E9;
     color: white;
 }
@@ -55,24 +74,21 @@
 .slider-body .css-nnid7-MuiSlider-valueLabel {
     white-space: none;
     text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 0 20px 3px #AFD6DD;
+    border-radius: 0.75em;
+    box-shadow: 0 0 1.25em 0.188em #AFD6DD;
     background-color: white;
     color: #4b7fbb;
     font-weight: 600;
 }
 
-.MuiSlider-thumb[data-index="1"] .css-nnid7-MuiSlider-valueLabel {
-    top: 75px
+.MuiSlider-thumb:last-child .css-nnid7-MuiSlider-valueLabel:last-child {
+    top: 4.9em
 }
 
-.MuiSlider-thumb[data-index="0"] .css-nnid7-MuiSlider-valueLabel {
-    top: -17px
+.MuiSlider-thumb:last-child .css-nnid7-MuiSlider-valueLabel:last-child::before {
+    bottom: 3.4em;
 }
 
-.MuiSlider-thumb[data-index="1"] .css-nnid7-MuiSlider-valueLabel:before {
-    bottom: 48px;
-}
 
 .slider-body,
 .slider-body .MuiSlider-markLabel,
