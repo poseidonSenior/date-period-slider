@@ -9,6 +9,10 @@
     padding: 3.75em;
 }
 
+.slider-focus {
+    border: 1px solid #5CADEA;
+}
+
 .months-or-years {
     width: 4.688em
 }
@@ -98,4 +102,12 @@
 
 .slider-body .MuiSlider-mark {
     display: none;
+}
+
+.switch-container {
+    width: 5em;
+}
+
+.switch-focus {
+    border: 1px solid #5CADEA;
 }

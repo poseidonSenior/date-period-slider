@@ -10,6 +10,9 @@ export const CustomSlider = () => {
     const [value, setValue] = useState([]);
     const [checked, setChecked] = useState(false);
     const [size, setSize] = useState();
+    const [isSwitchFocus, setIsSwitchFocus] = useState(false)
+    const [isSliderFocus, setIsSliderFocus] = useState(false)
+
     const refSlider = useRef();
 
     const convertDatesToArray = useCallback((startDate, endDate) => {
@@ -139,6 +142,23 @@ export const CustomSlider = () => {
         };
     }, []);
 
+    const focusCheckSwitch = useCallback((type) => {
+        if (type === 'focus') {
+            setIsSwitchFocus(true)
+        } else {
+            setIsSwitchFocus(false)
+        }
+    }, [isSwitchFocus])
+
+    const focusCheckSlider = useCallback((type) => {
+        if (type === 'focus') {
+            setIsSliderFocus(true)
+        } else {
+            console.log('first')
+            setIsSliderFocus(false)
+        }
+    }, [isSliderFocus])
+
     const content = useMemo(() => {
         return (<Box sx={{ maxWidth: 1000, display: 'flex', alignItems: 'center' }}>
             <div className='months-or-years'>
@@ -146,8 +166,10 @@ export const CustomSlider = () => {
                 <p className={`months ${checked && 'active-p'}`}>Месяца</p>
             </div>
             <Slider
+                onFocus={(e) => focusCheckSlider(e.type)}
+                onBlur={(e) => focusCheckSlider(e.type)}
                 ref={refSlider}
-                className={'slider'}
+                className={classNames('slider', { 'slider-focus': isSliderFocus })}
                 min={0}
                 max={dates.length - 1}
                 value={value}
@@ -158,14 +180,19 @@ export const CustomSlider = () => {
                 scale={calculateValue}
             />
         </Box>)
-    }, [checked, value, size])
+    }, [checked, value, size, isSliderFocus])
+
 
     return (
         <div className='custom-slider-container'>
             <div className='slider-body'  >
                 {content}
-                <Switch checked={checked}
-                    onChange={handleChangeSwitch} />
+                <div className={classNames('switch-container', {
+                    'switch-focus': isSwitchFocus
+                })} onFocus={(e) => focusCheckSwitch(e.type)} onBlur={(e) => focusCheckSwitch(e.type)}>
+                    <Switch checked={checked}
+                        onChange={handleChangeSwitch} />
+                </div>
             </div>
         </div>
     )
